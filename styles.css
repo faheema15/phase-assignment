@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212ed;
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-text {
+  font-family: "Arial Black", sans-serif;
+  font-size: 7vw;
+  font-weight: bold;
+  transform: scaleX(1.2);
+  text-transform: uppercase;
+  letter-spacing: -0.05em; 
+  line-height: 1;
+  z-index: 3;
+  color: white;
+  pointer-events: none;
+}
+
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-image {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.image-caption {
+  position: absolute; 
+}
+
+.image-caption:nth-child(1) {
+  top: 20%;
+  left: 13%;
+}
+
+.image-caption:nth-child(2) {
+  top: 10%;
+  right: 24%;
+}
+
+.image-caption:nth-child(3) {
+  top: 68%;
+  left: 20%;
+}
+
+.image-caption:nth-child(4) {
+  bottom: 4%;
+  right: 20%;
+}
+
+.image-caption:hover .caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-container {
+  position: absolute;
+  width: 350px;  
+  height: 190px; 
+  display: none;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #6a6868a3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.diagonal {
+  position: absolute;
+  width: 398px;  /* Correct diagonal length */
+  height: 1px;
+  background-color: #6a6868a3;
+  top: 0;
+  left: 0;
+}
+
+/* First diagonal from top-left to bottom-right */
+.diagonal.one {
+  transform: rotate(28.3deg);
+  transform-origin: top left;
+}
+
+/* Second diagonal from top-right to bottom-left */
+.diagonal.two {
+  transform: rotate(-28.3deg);
+  transform-origin: top right;
+  left: auto;
+  right: 0;
+}
+
+.rect1 { top: 20%; left: 13%; }
+.rect2 { top: 10%; right: 24%; }
+.rect3 { bottom: 6%; left: 20%; }
+.rect4 { bottom: 18%; right: 20%; }
+
+.image-caption:hover .caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.caption {
+  position: relative;
+  bottom: 42px;
+  left: 240px;
+  text-align: left;
+  font-family: "Arial Black", sans-serif;
+  color: white;
+  opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+  
+  .caption h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+  
+  .subtext {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: lighter;
+  }
+
+  
